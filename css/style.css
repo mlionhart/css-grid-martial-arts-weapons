@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 33.333vh);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-areas: 
+    "bo bo bo bo"
+    "nunchaku nunchaku sai sai"
+    "nunchaku nunchaku samurai escrima";
+}
+
+.bo {
+    grid-area: bo;
+    background: url(../img/bo2.jpg) no-repeat;
+    /* background-size: 70% 100%; */
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+}
+
+.nunchaku {
+    grid-area: nunchaku;
+    background: url(../img/nunchaku.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+}
+
+.sai {
+    grid-area: sai;
+    background: url(../img/sai.jpg) no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: contain;
+    background-position: center;
+    background-color: #514748;
+}
+
+.samurai {
+    grid-area: samurai;
+    background: url(../img/samurai.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+}
+
+.escrima {
+    grid-area: escrima;
+    background: url(../img/escrima.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #0D0D0D;
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    font-weight: lighter;
+    background: black;
+    color: white;
+    padding: .5em;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .container {
+        background: black;
+        /* grid-template-columns: 100%; */
+        grid-template-rows: repeat(5, 20vh);
+        grid-template-areas: 
+        "bo bo bo bo"
+        "nunchaku nunchaku nunchaku nunchaku"
+        "sai sai sai sai"
+        "samurai samurai samurai samurai"
+        "escrima escrima escrima escrima";
+    }
+
+    footer {
+        padding-bottom: 20px;
+    }
+}
